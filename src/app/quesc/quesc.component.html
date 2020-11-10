@@ -1,0 +1,37 @@
+
+
+<form #addressForm="ngForm" class="container mt-3" (ngSubmit)="logValue()">
+    <div class="row justify-content-center">
+      <div class="col-6">
+          <button type="button" class="btn btn-primary btn-block" (click)="addAddress()">Pannel X</button>
+        <section class="container border mb-4 p-3" *ngFor="let Phonenumbers of Phonenumbers; let i = index;">
+          <div class="row">
+            <div class="col-6">
+                <h4> ADD Phone Number {{i + 1}}</h4>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i)">Remove</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Enter Panel  name</label>
+                   
+                    <input type="numbers" class="form-control" [(ngModel)]="Phonenumbers.phonenumbers" name="Phonenumber_{{Phonenumbers.id}}" placeholder="Enter name of y"/>
+                    <button type="button" class="btn btn-primary btn-block" (click)="add()">+</button>
+
+                  </div>
+            </div>
+                     
+          </div>
+        </section>
+  
+        <div class="text-right">
+            <input type="submit" class="btn btn-success" value="Submit"/>
+        </div>
+        
+      </div>
+    </div>
+  
+  </form> 
